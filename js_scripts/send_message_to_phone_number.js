@@ -6,9 +6,9 @@ for (chat in Chats) {
         continue;
     };
     var temp = {};
-    temp.contact = Chats[chat].__x__formattedTitle;
+    temp.contact = Chats[chat].__x_formattedTitle;
     temp.id = Chats[chat].__x_id;
-    if(temp.id.search(contact)!=-1 && temp.id.search('g.us')==-1 ){
+    if(temp.contact.search(contact)!=-1 && temp.id.search('g.us')==-1 ){
         Chats[chat].sendMessage(message);
         return true
     }
